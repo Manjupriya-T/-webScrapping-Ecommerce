@@ -36,3 +36,78 @@
     transform: rotate(360deg);
   }
 }
+
+#full{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 8px;
+  gap:16px;
+}
+
+.image{
+  object-position: top;
+  object-fit: cover;
+}
+
+#full{
+  float: none;
+  min-width: 0;
+  width: auto;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+body{
+  font-family: "Amazon Ember",Arial,sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+
+}
+
+.image{
+  height:300px;
+  width: 1/1;
+  object-fit: cover;
+}
+
+.Electroics{
+  margin-top: 24px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  transition: 0.4s;
+  width: 50vw;
+  text-align: center;
+}
+
+.search{
+  margin-left: 40%;
+  width:200px;
+   height:24px;
+  border-color:whitesmoke ;
+  border-right-color: none;
+  border-right: 0px;
+  border-radius: 18px;
+}
+
+.button{
+  margin-left:16px;
+  border-radius:7px ;
+   padding:6px;
+   border-color:whitesmoke
+}
+
+@media(min-width:291px){
+  .search{
+    margin-left:5%;
+    /* width:100px */
+  }
+}
+
+@media(max-width:290px){
+  .search{
+    margin-left:5%;
+    width: 100px;
+  }
+}

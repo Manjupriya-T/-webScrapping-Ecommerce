@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Product from './productComponent/Product';
+import Searchbar from './productComponent/Searchbar';
+import ShowSingleProduct from './productComponent/ShowSingleProduct';
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import Home from './productComponent/Home';
 
 function App() {
+const [singleProduct, setSingleProduct] = useState([])
+// console.log(singleProduct)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" >
+      <BrowserRouter>
+      <Searchbar data = {setSingleProduct}/>
+      <Routes>
+      <Route path = "Product" element = {<Product/>}/>
+      <Route path = "ShowSingleProduct" element = {<ShowSingleProduct data = {singleProduct}/>}/>
+      <Route path = "/" element = {<Home/>}/>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }

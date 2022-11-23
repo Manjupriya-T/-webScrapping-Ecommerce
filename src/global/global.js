@@ -1,0 +1,1 @@
+export const API = 'https://web-scrapping-iz7e.onrender.com'
